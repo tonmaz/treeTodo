@@ -12,16 +12,16 @@ const Page = forwardRef(({title, children, ...rest}, ref) => {
     //
     // useEffect(() => {
     //   sendPageViewEvent();
-  // }, [sendPageViewEvent]);
+    // }, [sendPageViewEvent]);
 
-  return (
-      <div ref={ref} {...rest}>
-          <Helmet>
-              <title>{title}</title>
-          </Helmet>
-          {children}
-      </div>
-  );
+    return (
+        <div ref={ref} {...rest}>
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
+            {children}
+        </div>
+    );
 });
 
 export default Page;

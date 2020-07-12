@@ -4,9 +4,9 @@ import todoSliceReducer from "./todos";
 import updateTodoSlice from "./UpdateTodo";
 
 export default configureStore({
-    reducer: {
-        counterSlice: counterSliceReducer,
-        todoSlice: todoSliceReducer,
-        updateSlice: updateTodoSlice,
-    },
+  reducer: {
+    counterSlice: counterSliceReducer,
+    todoSlice: todoSliceReducer,
+    updateSlice: updateTodoSlice,
+  },
 });
