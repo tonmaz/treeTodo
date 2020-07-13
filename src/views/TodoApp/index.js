@@ -6,7 +6,7 @@ import AddTodo from "./AddTodo";
 const TodoApp = () => {
     return (
         <Page title="TodoApp">
-            <div>
+            <div style={{marginTop: 25}}>
                 <AddTodo/>
                 <TodosList/>
             </div>

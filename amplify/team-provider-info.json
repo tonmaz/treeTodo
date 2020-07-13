@@ -10,6 +10,17 @@
       "StackName": "amplify-tree-dev-233722",
       "StackId": "arn:aws:cloudformation:eu-central-1:882695882769:stack/amplify-tree-dev-233722/c122b020-c3be-11ea-baa4-067c398aa192",
       "AmplifyAppId": "d28mn1u5651frq"
+    },
+    "categories": {
+      "auth": {
+        "tree4b59d89d": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d28mn1u5651frq",
+          "type": "manual"
+        }
+      }
     }
   }
 }

@@ -36,10 +36,21 @@ const AddTodo = () => {
       return;
     }
     if (task.task) {
-      dispatch(updateTask(details));
+      dispatch(
+          updateTask({
+            id: task.id,
+            task: todo,
+          })
+      );
       setTodo("");
       dispatch(clearTodo());
-    } else dispatch(submitTodo(todo));
+    } else
+      dispatch(
+          submitTodo({
+            task: todo,
+            completed: false,
+          })
+      );
     setTodo("");
     console.log(todo);
   };

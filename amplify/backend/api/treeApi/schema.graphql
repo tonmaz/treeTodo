@@ -2,5 +2,14 @@ type Todo @model {
     id: ID!
     task: String!
     completed: Boolean!
+    subscribers: [Subscribers]
 
+}
+
+type Subscribers  @ model{
+    id: ID!
+    Tonde:String
+    Judith:String
+    Pat:String
+    Sarah:String
 }

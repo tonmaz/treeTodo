@@ -14,16 +14,17 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     // maxWidth: 275,
-    minHeight: 50,
-    margin: 50,
+    minHeight: 20,
+    margin: 20,
     display: "flex",
   },
   title: {
-    fontSize: 22,
+    fontSize: 18,
     marginLeft: 40,
   },
   btn: {
     marginLeft: "auto",
+    textTransform: "none",
   },
 }));
 
@@ -35,12 +36,21 @@ const TodoItem = ({todo, edit}) => {
 
   const handleToggle = (tod) => {
     console.log(tod.id);
-    dispatch(completeTodo(tod));
+    dispatch(
+        completeTodo({
+          id: tod.id,
+          completed: !tod.completed,
+        })
+    );
   };
 
   const handleDelete = (tod) => {
     console.log(tod.id);
-    dispatch(deleteTask(tod.id));
+    dispatch(
+        deleteTask({
+          id: tod.id,
+        })
+    );
   };
 
   return (
@@ -52,7 +62,7 @@ const TodoItem = ({todo, edit}) => {
 
           <Typography className={classes.title}>{todo.task}</Typography>
           <Button className={classes.btn} onClick={() => handleToggle(todo)}>
-            {todo.completed ? "done" : "complete"}
+            {todo.completed ? "Done" : "Pending"}
           </Button>
           <Button onClick={() => handleDelete(todo)}>
             <DeleteIcon/>

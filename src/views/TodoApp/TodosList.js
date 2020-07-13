@@ -18,7 +18,6 @@ const TodosList = () => {
   const dispatch = useDispatch();
   // const [todos, setTodos] = useState([]);
   const todos = useSelector((state) => state.todoSlice.entities);
-  console.log(todos);
   useEffect(() => {
     dispatch(getTodos());
   }, []);
